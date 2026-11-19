@@ -1,0 +1,583 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0E8D7 !important;
+    font-family: 'Rinter', sans-serif;
+    overflow-x: hidden;
+}
+@font-face {
+    font-family: 'MONOLITO';
+    src: url('MONOLITO.otf') format('opentype'),
+         url('MONOLITO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rinter';
+    src: url('Rinter.otf') format('opentype'),
+         url('Rinter.ttf') format('truetype'),
+         url('Rinter.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* font eklemeyi tamamen geminidan öğrendim. aslında zor değilmiş :) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F7F4EB; 
+    font-family: sans-serif;
+}
+.main-header {
+    background-color: #687C50; 
+    padding: 1.8rem 3rem;       
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    position: relative;         
+    width: 100%;
+}
+.header-title {
+    font-family: 'Granika', sans-serif;
+    color: #F0E8D7;             
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.header-logo {
+    position: absolute;
+    right: 3rem;               
+    font-family: 'Granika', sans-serif;
+    color: #F0E8D7;             
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.section-1 {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0 2rem 0;
+    position: relative;
+    overflow-x: hidden;
+}
+.hero-container {
+    display: inline-block;
+    max-width: 100%;
+}
+.hero-title {
+    font-family: 'MONOLITO', sans-serif;
+    color: #344B35;
+    font-size: 15rem;
+    line-height: 0.85;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.hero-bottom-bar {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 2.5rem;  
+    width: 100%;
+    margin-top: 1.5rem; 
+}
+
+.lang-capsule {
+    background-color: #A93E30;
+    color: #F0E8D7;
+    font-family: 'Rinter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.5rem 1.6rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+.project-info {
+    font-family: 'Rinter', sans-serif;
+    color: #687C50; 
+    font-size: 1rem;
+    font-weight: 600; 
+    text-transform: lowercase;
+}
+.hero-bottom-bar {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;  
+    justify-content: flex-start;
+    gap: 2rem;               
+    margin-top: 1rem;
+}
+.lang-capsule {
+    background-color: #A93E30;
+    color: #F0E8D7;
+    font-family: 'Rinter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.55rem 1.6rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+.right-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+}
+.project-info {
+    font-family: 'Rinter', sans-serif;
+    color: #687C50;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    line-height: 1.2;
+}
+.instructor-note {
+    font-family: 'Rinter', sans-serif;
+    color: #A93E30;
+    font-size: 0.85rem;          
+    font-weight: 400;
+    text-transform: lowercase;
+    text-align: left;
+    line-height: 1.3;
+    max-width: 280px;            
+}
+
+.intersect-wrapper {
+    position: relative;
+    width: 100vw;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+.intersect-title {
+    font-family: 'MONOLITO', sans-serif;
+    color: #A93E30;
+    font-size: 7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    clip-path: inset(0 0 25% 0);
+}
+/*clip-path ile yazının alt kısmını keserek sadece üst %75'ini görünür hale getirdim. Bu, alt çizgi ile kesişen bir görsel efekt yarattı.*/
+/*geminidan yardım aldım.*/
+.divider-line {
+    position: absolute;
+    width: 100vw;
+    height: 4px;
+    background-color: #344B35;
+    bottom: calc(3rem + (7rem * 0.25)); 
+    left: 0;
+    z-index: 2;
+}
+/* calc(3rem + (7rem * 0.25)) ile alt çizginin konumunu ayarladım. 3rem, intersect-wrapper'ın padding-bottom değerini temsil eder. 7rem ise intersect-title'ın font-size değeridir. 0.25 çarpanı, clip-path ile kesilen kısmın oranını temsil eder. */
+.section-2 {
+    width: 100%;
+    min-height: auto;
+    background-color: #F0E8D7;
+    padding: 1rem 8% 6rem 12%;   
+    margin-top: -6rem;           
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+/* 1. SECTION-2'NİN ALT BOŞLUĞUNU KISMA */
+.section-2 {
+    padding-bottom: 0 !important; /* Alt boşluğu tamamen sıfırlar */
+}
+
+/* 2. AYIRICI ÇİZGİYİ DİREKT SECTION 2'NİN ALTINA OTURTMA */
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #344B35;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 2rem; /* Çizgi ile 3. bölümün "VİZYONUM &" başlığı arasındaki mesafe */
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+}
+
+
+.vertical-title-group {
+    position: relative;
+    font-family: 'Monolito', sans-serif;
+    font-size: 10rem;
+    line-height: 1;
+    text-transform: uppercase;
+    user-select: none;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    flex-shrink: 0;
+}
+
+.title-benim {
+    display: block;
+    color: #687C50;
+    margin-top: 0;
+}
+
+.title-hakkimda {
+    display: block;
+    color: #A93E30;
+    position: absolute;
+    top: 10.5rem;
+    left: -4.8rem;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 620px;           
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-description {
+    font-family: 'Rinter', sans-serif;
+    color: #111111;
+    font-size: 1.40rem;
+    line-height: 1.55;
+    font-weight: 700;
+    margin-bottom: 2.8rem;
+    letter-spacing: -0.015em;
+    text-align: justify;        
+}
+
+.about-description:nth-child(1) {
+    padding-left: 4.8rem;
+}
+
+.about-description:nth-child(2) {
+    padding-left: 1.8rem;
+}
+
+.about-description:nth-child(3) {
+    padding-left: 0;
+}
+.about-image-grid {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.vertical-red-line {
+    width: 3.5px;            
+    height: 690px;            
+    background-color: #A93E30;  
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+/* border-radius ile köşeleri hafif yuvarlattım. flex-shrink ile küçülmesini engelledim.*/
+.side-skills-wrapper {   
+    display: flex;
+    align-items: flex-start; 
+    gap: 2rem;                   
+}
+/* üst satırda flex ve flex start ile hizalamayı öğrendim. alt satırda gap ile aralığı ayarladım. */
+.dog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    flex-shrink: 0;
+}
+.dog-photo {
+    width: 350px;                
+    height: 500px;                  
+    object-fit: cover;
+    border: 3px solid #344B35;   
+    box-shadow: 6px 6px 0px #A93E30; 
+    border-radius: 4px;
+}
+
+.dog-caption {
+    font-family: 'Monolito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #A93E30;
+    letter-spacing: 0.05em;
+}
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #344B35;
+    border: none;
+    margin: 0;
+
+}
+
+.section-3 {
+    position: relative;
+    width: 100%;
+    min-height: 110vh;
+    padding: 3rem 6rem 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.title-vision {
+    font-family: 'Monolito', sans-serif !important;
+    font-size: 10vw;            
+    font-weight: 800;
+    color: #687C50;             
+    align-self: flex-start;
+    line-height: 2;
+    margin: 0;
+    letter-spacing: 0.02em;
+    margin-top: -6rem;
+}
+.title-goals {
+    font-family: 'Monolito', sans-serif !important;
+    font-size: 13vw;           
+    font-weight: 700;
+    color: #A93E30;             
+    align-self: flex-end;
+    line-height: 0.9;
+    margin: 0;
+    letter-spacing: 0.01em;
+    margin-top: -5rem;;
+}
+.vision-content-placeholder {
+    flex-grow: 1;
+    min-height: 350px;          
+}
+.vision-content {
+    width: 80vw;
+    max-width: 1050px;          /* Eni az bir şey kısarak paragrafları daha tok bir dikdörtgen blok yaptım */
+    margin-top: -2.5rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: left;
+}
+.vision-text {
+    font-family: 'Rinter', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 900;       
+    line-height: 1.6;
+    color: #0d0d0d;       
+    max-width: 100%;
+    margin: 0;
+}
+.step-1 {
+    align-self: flex-start;
+    margin-left: 22vw;
+}
+
+.step-2 {
+    align-self: center;
+}
+
+.step-3 {
+    align-self: flex-end;
+    margin-right: 28vw; 
+}
+
+.vision-content {
+    width: 85vw;
+    max-width: 1200px;
+    margin-top: -5rem;         
+    margin-bottom: 2rem;       
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;             
+    text-align: left;
+}
+/* PARAGRAF YAPISI */
+.vision-text {
+    font-family: 'Rinter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 1.6;
+    color: #2B2B2B;
+    max-width: 100%;          
+    margin: 0;
+    
+}
+.section-3 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 6rem 0rem 6rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.section-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #344B35; /* Orman yeşili */
+    border: none;
+    margin: 0;
+}
+.section-4 {
+    width: 100%;
+    min-height: 80vh;
+    background-color: #F0E8D7;    
+    padding: 5rem 5rem 4rem 5rem; 
+    display: flex;
+    flex-direction: row;          
+    box-sizing: border-box;
+}
+
+.contact-left {
+    flex: 1;                    
+    border-right: 2px solid #344B35;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.contact-subtitle {
+    font-family: 'Monolito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #344B35;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: #344B35;
+    font-family: 'Rinter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+/*gemınıdan yardım aldım*/
+.social-item:hover {
+    transform: translateX(8px);   
+    opacity: 0.8;
+}
+
+.social-icon {
+    width: 32px;             
+    height: 32px;
+    object-fit: contain;
+}
+
+.contact-right {
+    flex: 3;                     
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;      
+}
+
+.contact-title {
+    font-family: 'Monolito', sans-serif !important;
+    line-height: 0.9;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.contact-subtitle {
+    font-family: 'Monolito', sans-serif;
+    font-size: 2.5rem;            
+    font-weight: 700;
+    color: #344B35;
+    letter-spacing: 0.05em;
+    margin: 0;
+    white-space: nowrap;         
+}
+
+.contact-right {
+    flex: 3;
+    padding-left: 15vw;        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;     
+}
+
+.title-ideas {
+    font-size: 10vw;            
+    color: #344B35;
+    font-weight: 700;
+}
+
+.title-for-me {
+    font-size: 10vw;
+    color: #344B35;
+    font-weight: 700;
+}
+
+.title-valuable {
+    font-size: 13vw;          
+    color: #A93E30;
+    font-weight: 700;
+    margin-top: -2.5rem;         
+    position: relative;
+    z-index: 2;
+}
+.social-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+} 
+.site-footer {
+    width: 100%;
+    min-height: 25vh;               
+    background-color: #687C50;   
+    display: flex;
+    justify-content: center;     
+    align-items: center;           
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+}
+
+.footer-title {
+    font-family: 'MONOLITO', sans-serif !important;
+    font-size: 3vw;          
+    color: #F0E8D7;                
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;        
+}
